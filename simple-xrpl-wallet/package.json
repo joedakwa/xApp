@@ -1,4 +1,5 @@
 {
+  "license": "MIT",
   "name": "simple-xrpl-wallet",
   "type": "module",
   "scripts": {
