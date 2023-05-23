@@ -6,7 +6,8 @@ import getWalletDetails from './src/assets/helpers/get-wallet-details.js';
 // Optional: Render the XRPL logo
 addXrplLogo();
 
-const client = new Client(process.env.CLIENT); // Get the client from the environment variables
+document.addEventListener('DOMContentLoaded', () => {
+const client = new Client(import.meta.env.VITE_CLIENT); // Get the client from the environment variables
 
 // Get the elements from the DOM
 const sendXrpButton = document.querySelector('#send_xrp_button');
@@ -18,15 +19,15 @@ const ledgerLoadingDiv = document.querySelector('#loading_ledger_details');
 
 // Add event listeners to the buttons
 sendXrpButton.addEventListener('click', () => {
-    window.location.pathname = '/src/send-xrp/send-xrp.html';
+    window.location.pathname = '/src/assets/send-xrp/send-xrp.html';
 });
 
 connectWalletButton.addEventListener('click', () => {
-    window.location.pathname = '/src/connect-wallet/connect-wallet.html';
+    window.location.pathname = '/src/assets/connect-wallet/connect-wallet.html';
 });
 
 txHistoryButton.addEventListener('click', () => {
-    window.location.pathname = '/src/transaction-history/transaction-history.html';
+    window.location.pathname = '/src/assets/transaction-history/transaction-history.html';
 });
 
 // Self-invoking function to connect to the client
@@ -50,7 +51,7 @@ txHistoryButton.addEventListener('click', () => {
 
                 // Redirect on View More link click
                 walletElement.querySelector('#view_more_button').addEventListener('click', () => {
-                    window.open(`https://${process.env.EXPLORER_NETWORK}.xrpl.org/accounts/${address}`, '_blank');
+                    window.open(`https://${import.meta.env.VITE_EXPLORER_NETWORK}.xrpl.org/accounts/${address}`, '_blank');
                 });
             })
             .finally(() => {
@@ -74,3 +75,4 @@ txHistoryButton.addEventListener('click', () => {
         console.log(error);
     }
 })();
+});

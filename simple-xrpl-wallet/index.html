@@ -5,9 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="./src/assets/xrpl.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple XRPL Wallet</title>
-    <link rel="preload" href="./src/send-xrp/send-xrp.html">
-    <link rel="preload" href="./src/transaction-history/transaction-history.html">
-    <link rel="preLoad" href="./src/connect-wallet/connect-wallet.html" as="fetch">
+    <link rel="preload" href="./src/assets/send-xrp/send-xrp.html" as="fetch">
+    <link rel="preload" href="./src/assets/transaction-history/transaction-history.html" as="fetch">
+    <link rel="preLoad" href="./src/assets/connect-wallet/connect-wallet.html" as="fetch">
     <link rel="preload" href="index.css" as="style"> 
     <link rel="stylesheet" href="index.css">
   </head>
@@ -41,3 +41,18 @@
     <script type="module" src="/index.js"></script>
   </body>
 </html>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+	</head>
+	<body>
+		<div id="root"></div>
+    <script type="module" src="src/assets/nodespecific.ts"></script>
+		<script type="module" src="../index.js"></script>
+	</body>
+</html> -->

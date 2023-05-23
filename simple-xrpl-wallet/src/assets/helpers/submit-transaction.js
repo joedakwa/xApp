@@ -3,7 +3,7 @@ import { Wallet } from 'xrpl';
 export default async function submitTransaction({ client, tx }) {
     try {
         // Create a wallet using the seed
-        const wallet = await Wallet.fromSeed(process.env.SEED);
+        const wallet = await Wallet.fromSeed(import.meta.env.VITE_SEED);
         tx.Account = wallet.address;
 
         // Sign and submit the transaction : https://xrpl.org/send-xrp.html#send-xrp

@@ -4,17 +4,18 @@ import getWalletDetails from '../helpers/get-wallet-details';
 import renderXrplLogo from '../helpers/render-xrpl-logo';
 import submitTransaction from '../helpers/submit-transaction';
 
+
 // Optional: Render the XRPL logo
 renderXrplLogo();
 
-const client = new Client(process.env.CLIENT); // Get the client from the environment variables
+const client = new Client(import.meta.env.VITE_CLIENT); // Get the client from the environment variables
 
 // Self-invoking function to connect to the client
 (async () => {
     try {
         await client.connect(); // Connect to the client   
 
-        const wallet = Wallet.fromSeed(process.env.SEED); // Convert the seed to a wallet : https://xrpl.org/cryptographic-keys.html
+        const wallet = Wallet.fromSeed(import.meta.env.VITE_SEED); // Convert the seed to a wallet : https://xrpl.org/cryptographic-keys.html
 
         // Subscribe to account transaction stream
         await client.request({
