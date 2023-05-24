@@ -2,6 +2,7 @@ import { Client, dropsToXrp, rippleTimeToISOTime } from 'xrpl';
 
 import addXrplLogo from './src/assets/helpers/render-xrpl-logo.js';
 import getWalletDetails from './src/assets/helpers/get-wallet-details.js';
+//import "./src/assets/shims.ts";
 
 // Optional: Render the XRPL logo
 addXrplLogo();
