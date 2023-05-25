@@ -8,7 +8,7 @@ import submitTransaction from '../helpers/submit-transaction';
 // Optional: Render the XRPL logo
 renderXrplLogo();
 
-const client = new Client(import.meta.env.VITE_CLIENT); // Get the client from the environment variables
+const client = new Client(process.env.CLIENT); // Get the client from the environment variables
 
 // Self-invoking function to connect to the client
 (async () => {

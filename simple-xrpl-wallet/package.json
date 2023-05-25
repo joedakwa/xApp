@@ -3,7 +3,7 @@
   "name": "simple-xrpl-wallet",
   "type": "module",
   "scripts": {
-    "dev": "vite --force"
+    "dev": "vite"
   },
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",

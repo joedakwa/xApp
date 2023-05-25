@@ -8,7 +8,7 @@ import getWalletDetails from './src/assets/helpers/get-wallet-details.js';
 addXrplLogo();
 
 document.addEventListener('DOMContentLoaded', () => {
-const client = new Client(import.meta.env.VITE_CLIENT); // Get the client from the environment variables
+const client = new Client(process.env.CLIENT); // Get the client from the environment variables
 
 // Get the elements from the DOM
 const sendXrpButton = document.querySelector('#send_xrp_button');

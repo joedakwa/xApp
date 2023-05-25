@@ -52,8 +52,8 @@ async function fetchTxHistory() {
     try {
         loadMore.textContent = 'Loading...';
         loadMore.disabled = true;
-        const wallet = Wallet.fromSeed(import.meta.env.VITE_SEED);
-        const client = new Client(import.meta.env.VITE_CLIENT);
+        const wallet = Wallet.fromSeed(process.env.SEED);
+        const client = new Client(process.env.CLIENT);
 
         // Wait for the client to connect
         await client.connect();
