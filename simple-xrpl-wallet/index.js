@@ -45,8 +45,8 @@ txHistoryButton.addEventListener('click', () => {
         // Fetch the wallet details
         getWalletDetails({ client })
             .then(({ account_data, accountReserves, xAddress, address }) => {
-                walletElement.querySelector('.wallet_address').textContent = `Wallet Address: ${account_data.Account}`;
-                walletElement.querySelector('.wallet_balance').textContent = `Wallet Balance: ${dropsToXrp(account_data.Balance)} XRP`;
+                walletElement.querySelector('.wallet_address').textContent = `Wallet Address: ${account_data}`;
+                walletElement.querySelector('.wallet_balance').textContent = `Wallet Balance: ${dropsToXrp(account_data)} XRP`;
                 walletElement.querySelector('.wallet_reserve').textContent = `Wallet Reserve: ${accountReserves} XRP`;
                 walletElement.querySelector('.wallet_xaddress').textContent = `X-Address: ${xAddress}`;
 
